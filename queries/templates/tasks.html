@@ -1,2 +1,6 @@
 <h1>This is the page Tasks</h1>
-<p>{{ tasks }}</p>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.title }} - {{ task.project.name }}</li>
+        {% endfor %}
+    </ul>

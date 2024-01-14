@@ -19,13 +19,13 @@ def user(request, user_id):
     return HttpResponse(f"<h1>Hello {user_id}!</h1>")
 
 def get_all_projects(request):
-    all_projects = list(Project.objects.values())
+    all_projects = Project.objects.all()
     return render(request, "projects.html", {
         "projects": all_projects
     })
 
 def get_all_tasks(request):
-    all_tasks = list(Task.objects.values())
+    all_tasks = Task.objects.all()
     return render(request, "tasks.html", {
         "tasks": all_tasks
     })
