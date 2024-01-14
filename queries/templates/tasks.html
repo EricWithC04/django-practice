@@ -1,6 +1,7 @@
 <h1>This is the page Tasks</h1>
     <ul>
         {% for task in tasks %}
-            <li>{{ task.title }} - {{ task.project.name }}</li>
+            <li>{{ task.title }} - {{ task.project.name }} | {% if task.done %}Completada{% else %}Pendiente{% endif %}</li>
+            <button>Completar</button>
         {% endfor %}
     </ul>
