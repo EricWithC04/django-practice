@@ -1,20 +1,9 @@
-<nav>
-    <li>
-        <a href="/">Main</a>
-    </li>
-    <li>
-        <a href="/hello">Hello</a>
-    </li>
-    <li>
-        <a href="#">About</a>
-    </li>
-    <li>
-        <a href="/projects">Projects</a>
-    </li>
-    <li>
-        <a href="/tasks">tasks</a>
-    </li>
-</nav>
+{% extends 'layouts/navbar.html' %}
+
+{% block content %}
+
 <h1>This is the page About</h1>
 
 <p>Website developed by {{ username }}</p>
+
+{% endblock %}
