@@ -4,7 +4,8 @@
 
 <h1>Crear un nuevo proyecto</h1>
 
-<form action="">
+<form action="" method="POST">
+    {% csrf_token %}
     {{ form }}
     <button type="submit">Enviar</button>
 </form>
