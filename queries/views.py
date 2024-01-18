@@ -15,6 +15,9 @@ def about(request):
 def main(request):
     return render(request, "main.html")
 
+def new_task(request):
+    return render(request, "create_tasks.html")
+
 def user(request, user_id):
     return HttpResponse(f"<h1>Hello {user_id}!</h1>")
 
