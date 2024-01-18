@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Project, Task
 from .forms import CreateNewTask
@@ -17,9 +17,18 @@ def main(request):
     return render(request, "main.html")
 
 def new_task(request):
-    return render(request, "create_tasks.html", {
+    if request.method == "GET":
+        return render(request, "create_tasks.html", {
         "form": CreateNewTask()
     })
+    elif request.method == "POST":
+        Task.objects.create(
+            title = request.POST["title"],
+            description = request.POST["description"],
+            project_id = 1
+        )
+        return redirect("/tasks")
+    
 
 def user(request, user_id):
     return HttpResponse(f"<h1>Hello {user_id}!</h1>")
