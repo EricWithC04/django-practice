@@ -2,11 +2,14 @@
 
 {% block content %}
 
-<h1>This is the page Projects</h1>
-<ul>
+<h1>This is the page Projects</h1> 
+
+<div class="project-container">
     {% for project in projects %}
-        <li>{{ project.name }}</li>
+        <div>
+            <p>{{ project.name }}</p>
+        </div>
     {% endfor %}
-</ul>
+</div>
 
 {% endblock %}

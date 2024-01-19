@@ -57,3 +57,21 @@ body {
     max-width: 120px;
     max-height: 30px;
 }
+
+.project-container {
+    width: 25%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.project-container div {
+    color: white;
+    background-color: #555555;
+    padding-left: 20px;
+}
+
+.project-container div:hover {
+    cursor: pointer;
+    background-color: #999999;
+}
