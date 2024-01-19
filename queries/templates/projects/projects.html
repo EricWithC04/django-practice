@@ -1,4 +1,5 @@
 {% extends 'layouts/navbar.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -6,10 +7,12 @@
 
 <div class="project-container">
     {% for project in projects %}
-        <div>
+        <div id="{{ project.id }}" class="btn-project">
             <p>{{ project.name }}</p>
         </div>
     {% endfor %}
 </div>
+
+<script src="{% static 'js/projects.js' %}"></script>
 
 {% endblock %}

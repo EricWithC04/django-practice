@@ -41,6 +41,9 @@ def create_project(request):
         )
         return redirect("/projects")
 
+def project_details(request):
+    return render(request, "projects/project_details.html")
+
 def user(request, user_id):
     return HttpResponse(f"<h1>Hello {user_id}!</h1>")
 
