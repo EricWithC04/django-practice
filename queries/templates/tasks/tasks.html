@@ -3,11 +3,16 @@
 {% block content %}
 
 <h1>This is the page Tasks</h1>
-    <ul>
-        {% for task in tasks %}
-            <li>{{ task.title }} - {{ task.project.name }} | {% if task.done %}Completada{% else %}Pendiente{% endif %}</li>
+
+<div class="task-container">
+    {% for task in tasks %}
+        <div>
+            <div>
+                <p>{{ task.title }} - {{ task.project.name }} | {% if task.done %}Completada{% else %}Pendiente{% endif %}</p>
+            </div>
             <button>Completar</button>
-        {% endfor %}
-    </ul>
+        </div>
+    {% endfor %}
+</div>
 
 {% endblock %}

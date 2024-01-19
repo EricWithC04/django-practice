@@ -26,3 +26,34 @@ body {
     color: white;
     text-decoration: none;
 }
+
+.container {
+    margin: 15px;
+    padding: 10px;
+    outline: 2px solid black;
+    border-radius: 18px;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.task-container {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.task-container div {
+    align-items: center;
+    display: flex;
+}
+
+.task-container div div {
+    width: 55%;
+}
+
+.task-container div button {
+    margin-left: 10px;
+    max-width: 120px;
+    max-height: 30px;
+}
