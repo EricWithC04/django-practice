@@ -41,8 +41,13 @@ def create_project(request):
         )
         return redirect("/projects")
 
-def project_details(request):
-    return render(request, "projects/project_details.html")
+def project_details(request, project_id):
+    detail_project = get_object_or_404(Project, id=project_id)
+    task_of_project = Task.objects.filter(project_id=project_id)
+    return render(request, "projects/project_details.html", {
+        "detail": detail_project,
+        "tasks": task_of_project
+    })
 
 def user(request, user_id):
     return HttpResponse(f"<h1>Hello {user_id}!</h1>")
