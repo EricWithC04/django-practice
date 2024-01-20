@@ -25,7 +25,7 @@ def new_task(request):
         Task.objects.create(
             title = request.POST["title"],
             description = request.POST["description"],
-            project_id = 1
+            project_id = request.POST["project"]
         )
         return redirect("/tasks")
     
