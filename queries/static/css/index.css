@@ -75,3 +75,9 @@ body {
     cursor: pointer;
     background-color: #999999;
 }
+
+.form-input {
+    background-color: #77bb77;
+    color: #333333;
+    display: block;
+}
